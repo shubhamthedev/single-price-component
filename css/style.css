@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 45%; } }
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #e5eff5; }
+
+.heading-primary {
+  font-size: 2.5rem;
+  color: #2ab2af;
+  margin-bottom: 3rem; }
+
+.heading-secondary {
+  font-size: 2rem;
+  color: #c0df34;
+  margin-bottom: 2rem; }
+
+.heading-tertiary {
+  margin-bottom: 2rem; }
+
+.community-para {
+  color: #98a6bd; }
+  .community-para:not(:last-child) {
+    margin-bottom: 1rem; }
+
+.quote {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.6); }
+
+.price {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  margin-bottom: 2rem; }
+  .price span {
+    font-size: 2.5rem;
+    margin-right: 0.8rem;
+    font-weight: 700;
+    color: #fff; }
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px; }
+
+.community-section {
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 6px; }
+  @media only screen and (max-width: 25em) {
+    .community-section {
+      padding: 2rem; } }
+
+.cta {
+  display: flex;
+  align-items: stretch;
+  color: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      flex-direction: column; } }
+
+.cta-money {
+  flex: 0 1 50%;
+  background-color: #2ab2af;
+  padding: 4rem;
+  border-bottom-left-radius: 6px; }
+  @media only screen and (max-width: 25em) {
+    .cta-money {
+      padding: 1rem; } }
+
+.cta-whyus {
+  border-bottom-right-radius: 6px;
+  padding: 4rem;
+  flex: 0 1 50%;
+  background-color: #2fcac8; }
+  @media only screen and (max-width: 25em) {
+    .cta-whyus {
+      padding: 1rem; } }
+
+.list {
+  list-style-type: none; }
+
+.list-item {
+  font-size: 1.4rem; }
+  .list-item:not(:last-child) {
+    margin-bottom: 0.5rem; }
+
+.btn:link, .btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #c0df34;
+  padding: 1.5rem 3rem;
+  font-weight: 700;
+  width: 75%;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.2s; }
+
+.btn:active, .btn:hover {
+  background-color: #c7e34a; }

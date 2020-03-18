@@ -1,0 +1,156 @@
+//Variables
+$color-primary-1: hsl(179, 62%, 43%);
+$color-primary-2: hsl(71, 73%, 54%);
+$color-neutral-1: hsl(204, 43%, 93%);
+$color-neutral-2: hsl(218, 22%, 67%);
+$color-black: #000;
+$color-white: #fff;
+//Mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  @include respond(tab-port) {
+    font-size: 56.25%;
+  }
+  @include respond(small-phone) {
+    font-size: 45%;
+  }
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: $color-neutral-1;
+}
+.heading-primary {
+  font-size: 2.5rem;
+  color: $color-primary-1;
+  margin-bottom: 3rem;
+}
+.heading-secondary {
+  font-size: 2rem;
+  color: $color-primary-2;
+  margin-bottom: 2rem;
+}
+.heading-tertiary {
+  margin-bottom: 2rem;
+}
+.community-para {
+  color: $color-neutral-2;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.quote {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgba($color-white, 0.6);
+}
+.price {
+  color: rgba($color-white, 0.4);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  span {
+    font-size: 2.5rem;
+    margin-right: 0.8rem;
+    font-weight: 700;
+    color: $color-white;
+  }
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  overflow: hidden;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.community-section {
+  background-color: $color-white;
+  padding: 4rem;
+  border-radius: 6px;
+  @include respond(small-phone) {
+    padding: 2rem;
+  }
+}
+.cta {
+  display: flex;
+  align-items: stretch;
+  color: $color-white;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
+.cta-money {
+  flex: 0 1 50%;
+  background-color: $color-primary-1;
+  padding: 4rem;
+  border-bottom-left-radius: 6px;
+  @include respond(small-phone) {
+    padding: 1rem;
+  }
+}
+.cta-whyus {
+  border-bottom-right-radius: 6px;
+  padding: 4rem;
+  flex: 0 1 50%;
+  background-color: lighten($color-primary-1, 6%);
+  @include respond(small-phone) {
+    padding: 1rem;
+  }
+}
+.list {
+  list-style-type: none;
+}
+.list-item {
+  font-size: 1.4rem;
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-white;
+    background-color: $color-primary-2;
+    padding: 1.5rem 3rem;
+    font-weight: 700;
+    width: 75%;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  &:active,
+  &:hover {
+    background-color: lighten($color-primary-2, 5%);
+  }
+}
